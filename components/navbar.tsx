@@ -28,14 +28,12 @@ export default function App() {
                     aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
                     className='sm:hidden'
                 />
-                <NavbarBrand className='cursor-pointer'>
+                <NavbarBrand
+                    onClick={() => router.push('/')}
+                    className='cursor-pointer'
+                >
                     <Modules />
-                    <p
-                        onClick={() => router.push('/')}
-                        className='font-bold text-inherit'
-                    >
-                        2513 MODULE
-                    </p>
+                    <p className='font-bold text-inherit'>2513 MODULE</p>
                 </NavbarBrand>
             </NavbarContent>
 
