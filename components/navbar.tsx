@@ -20,27 +20,31 @@ export const Modules = () => {
 export default function App() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const router = useRouter();
-    const menuItems = ['Beginners', 'Intermediates'];
 
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen}>
+        <Navbar onMenuOpenChange={setIsMenuOpen} className='z-10'>
             <NavbarContent>
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
                     className='sm:hidden'
                 />
-                <NavbarBrand>
+                <NavbarBrand className='cursor-pointer'>
                     <Modules />
-                    <p className='font-bold text-inherit'>2513 MODULE</p>
+                    <p
+                        onClick={() => router.push('/')}
+                        className='font-bold text-inherit'
+                    >
+                        2513 MODULE
+                    </p>
                 </NavbarBrand>
             </NavbarContent>
 
-            <NavbarContent className='hidden sm:flex gap-4' justify='end'>
+            <NavbarContent className='hidden sm:flex gap-5' justify='end'>
                 <NavbarItem>
                     <button
                         color='foreground'
                         onClick={() => router.push('/beginners')}
-                        className='cursor-pointer'
+                        className='cursor-pointer text-2xl text-blue-900 font-semibold hover:underline rounded-[2px] p-1'
                     >
                         Beginners
                     </button>
@@ -49,7 +53,7 @@ export default function App() {
                     <Link
                         color='foreground'
                         onClick={() => router.push('/intermediates')}
-                        className='cursor-pointer'
+                        className='cursor-pointer text-2xl text-blue-900 font-semibold hover:underline rounded-[2px] p-1'
                     >
                         Intermediates
                     </Link>
@@ -57,24 +61,24 @@ export default function App() {
             </NavbarContent>
 
             <NavbarMenu>
-                {menuItems.map((item, index) => (
-                    <NavbarMenuItem key={`${item}-${index}`}>
-                        <Link
-                            className='w-full'
-                            color={
-                                index === 2
-                                    ? 'primary'
-                                    : index === menuItems.length - 1
-                                      ? 'danger'
-                                      : 'foreground'
-                            }
-                            href='#'
-                            size='lg'
-                        >
-                            {item}
-                        </Link>
-                    </NavbarMenuItem>
-                ))}
+                <NavbarItem>
+                    <button
+                        color='foreground'
+                        onClick={() => router.push('/beginners')}
+                        className='cursor-pointer text-2xl text-blue-900 font-semibold hover:underline rounded-[2px] p-1'
+                    >
+                        Beginners
+                    </button>
+                </NavbarItem>
+                <NavbarItem>
+                    <Link
+                        color='foreground'
+                        onClick={() => router.push('/intermediates')}
+                        className='cursor-pointer text-2xl text-blue-900 font-semibold hover:underline rounded-[2px] p-1'
+                    >
+                        Intermediates
+                    </Link>
+                </NavbarItem>
             </NavbarMenu>
         </Navbar>
     );
