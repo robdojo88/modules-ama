@@ -27,6 +27,8 @@ function isExcludedPath(pathname: string): boolean {
     // Exclude /beginners/bWeek1 to /beginners/bWeek11
     if (/^\/beginners\/bWeek([1-9]|1[0-1])$/.test(pathname)) return true;
 
+    if (/^\/intermediates\/iWeek([1-9]|1[0-1])$/.test(pathname)) return true;
+
     return false;
 }
 
