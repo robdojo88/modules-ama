@@ -1,2 +1,7 @@
 @import 'tailwindcss';
 @config "../tailwind.config.js";
+
+.module_title {
+    font-size: 25px;
+    font-weight: 700;
+}

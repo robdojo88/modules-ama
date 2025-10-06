@@ -31,7 +31,7 @@ export default function ForwardButton() {
                 }
             }}
             disabled={!canGoForward}
-            className={`rounded-full transition duration-200 
+            className={`rounded-full transition duration-200 hidden md:flex
         ${
             canGoForward
                 ? 'hover:bg-gray-300 hover:scale-105 cursor-pointer'

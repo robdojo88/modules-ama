@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang='en'>
-            <body>
+            <body className=''>
                 <div className='fixed z-20 top-6/12 left-8'>
                     <BackButton />
                 </div>
@@ -21,7 +21,8 @@ export default function RootLayout({
                     <ForwardButton />
                 </div>
                 <Navbar />
-                <div className='md:p-10 min-h-[780px] md:min-h-[750px]'>
+                <div className='px-3 md:px-52 md:py-10 md:min-h-lvh'>
+                    {/* <div className='px-3 md:px-28 md:py-10 min-h-[780px] md:min-h-[750px]'> */}
                     <LastVisitedTracker />
                     {children}
                 </div>

@@ -17,6 +17,7 @@ export default function BackButton() {
                     router.push('/');
                 }
             }}
+            className='hidden md:flex'
         >
             <img
                 src='/arrow-left.svg'

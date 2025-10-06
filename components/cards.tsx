@@ -32,7 +32,7 @@ export default function Cards({ list }: CardListProps) {
                     <CardBody className='overflow-visible p-0 min-h-[200px]'>
                         <Image
                             alt={item.title}
-                            className='w-full object-cover h-[200px]'
+                            className='w-full object-cover h-[200px] hover:scale-95'
                             radius='lg'
                             shadow='sm'
                             src={item.img}

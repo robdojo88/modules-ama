@@ -22,7 +22,7 @@ export default function App() {
     const router = useRouter();
 
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen} className='z-10'>
+        <Navbar onMenuOpenChange={setIsMenuOpen} className='z-50'>
             <NavbarContent>
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}

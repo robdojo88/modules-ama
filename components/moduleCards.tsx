@@ -22,7 +22,7 @@ export default function moduleCards({ beginner_contents }: ModuleCardsProps) {
                 {beginner_contents.map((item, index) => (
                     <div
                         key={index}
-                        className='p-4 border border-gray-100 rounded-lg shadow hover:bg-gray-100 cursor-pointer'
+                        className='p-4 border border-gray-100 rounded-lg shadow hover:bg-gray-100 cursor-pointer space-y-3'
                         onClick={() => router.push(item.path)}
                     >
                         <h2 className='text-xl font-semibold'>{item.title}</h2>
